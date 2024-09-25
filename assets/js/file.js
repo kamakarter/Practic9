@@ -16,7 +16,12 @@ form.addEventListener('submit', (e)=>{
     const currentYear = new Date().getFullYear();
     let ageUser = currentYear - date;
 
-
+    if (!name && !date){
+        error.innerHTML = 'Проверьте еще раз поля, они пустые!';
+        nameInput.style.border = 'thin solid red';
+        dateInput.style.border = 'thin solid red';
+    }
+    
     if (!name){
         error.innerHTML = 'Поле с именем должно быть заполнено!';
         nameInput.style.border = 'thin solid red';
