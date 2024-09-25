@@ -10,32 +10,29 @@ form.addEventListener('submit', (e)=>{
     error.classList.remove('succes');
     error.classList.add('error');
 
-
     const name = nameInput.value;
     const date = parseInt(dateInput.value);
 
+    const currentYear = new Date().getFullYear();
+    let ageUser = currentYear - date;
 
-    // console.log(typeof date);
 
     if (!name){
         error.innerHTML = 'Поле с именем должно быть заполнено!';
         nameInput.style.border = 'thin solid red';
     }
 
-    if (name.length < 2){
+    else if (name.length < 2){
         error.innerHTML = 'Имя должно содеражать минимум 2 символа!';
         nameInput.style.border = 'thin solid red';
     }
 
-    if (!date){
+    else if (!date){
         error.innerHTML = 'Поле с годом рождения должно быть заполнено!'
         dateInput.style.border = 'thin solid red';
     }
-
-    const currentYear = new Date().getFullYear();
-    let ageUser = currentYear - date;
-
-    if (ageUser <= 18){
+        
+    else if (ageUser <= 18){
         error.innerHTML = 'Должно быть больше 18 лет!';
         dateInput.style.border = 'thin solid red';
     }
