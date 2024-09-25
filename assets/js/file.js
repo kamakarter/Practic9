@@ -42,6 +42,7 @@ form.addEventListener('submit', (e)=>{
 
     else {
         dateInput.style.border = 'thin solid green';
+        nameInput.style.border = 'thin solid green';
         error.innerHTML = 'Успешно';
         error.classList.remove('error');
         error.classList.add('succes');
