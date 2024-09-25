@@ -22,17 +22,17 @@ form.addEventListener('submit', (e)=>{
         nameInput.style.border = 'thin solid red';
     }
 
-    else if (name.length < 2){
+    if (name.length < 2){
         error.innerHTML = 'Имя должно содеражать минимум 2 символа!';
         nameInput.style.border = 'thin solid red';
     }
 
-    else if (!date){
+    if (!date){
         error.innerHTML = 'Поле с годом рождения должно быть заполнено!'
         dateInput.style.border = 'thin solid red';
     }
         
-    else if (ageUser <= 18){
+    if (ageUser <= 18){
         error.innerHTML = 'Должно быть больше 18 лет!';
         dateInput.style.border = 'thin solid red';
     }
