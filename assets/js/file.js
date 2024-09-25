@@ -16,14 +16,11 @@ form.addEventListener('submit', (e) => {
         error.innerHTML = 'Поле с именем должно быть заполнено!';
         nameInput.style.border = 'thin solid red';
         return;
-    } 
-    
-    else if (name.length < 2) {
+    } else if (name.length < 2) {
         error.innerHTML = 'Имя должно содержать минимум 2 символа!';
         nameInput.style.border = 'thin solid red';
         return;
-    } 
-    else {
+    } else {
         nameInput.style.border = '';
     }
 
@@ -31,8 +28,7 @@ form.addEventListener('submit', (e) => {
         error.innerHTML = 'Поле с годом рождения должно быть заполнено!';
         dateInput.style.border = 'thin solid red';
         return;
-    } 
-    else {
+    } else {
         dateInput.style.border = '';
     }
 
